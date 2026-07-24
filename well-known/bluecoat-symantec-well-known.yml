@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: probed
+source: live probes of /.well-known/* on Broadcom hosts
+note: >-
+  No real /.well-known documents are published. www.broadcom.com returns 404 for
+  all probed paths; techdocs.broadcom.com returns a catch-all 302 to a broken
+  concatenated URL (index.html.well-known/...), not a served document. Recorded
+  for auditability; no WellKnown/SecurityTxt scoring pointer wired (nothing present).
+hosts:
+- host: https://www.broadcom.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://techdocs.broadcom.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+    note: catch-all redirect, not a document
+  - path: /.well-known/openid-configuration
+    status: 302
+    note: catch-all redirect, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 302
+    note: catch-all redirect, not a document
+  - path: /.well-known/api-catalog
+    status: 302
+    note: catch-all redirect, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 302
+    note: catch-all redirect, not a document
