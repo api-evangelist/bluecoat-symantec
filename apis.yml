@@ -12,14 +12,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bluecoat-symantec.png
 name: Bluecoat (Symantec)
-description: 'Blue Coat Systems was a web-security and network-forensics vendor best known
-  for its ProxySG secure web gateway appliances, SSL Visibility, WebPulse/Global Intelligence
-  Network threat intelligence, and cloud web security (the Web Security Service). Bain Capital
-  led a consortium that took Blue Coat private in 2015; Symantec acquired the company in 2016,
-  and Broadcom acquired Symantec''s enterprise security business in 2019. Blue Coat''s technology
-  now ships inside Broadcom''s Symantec Enterprise Cloud portfolio as Cloud Secure Web Gateway
-  (Cloud SWG), Secure Web Gateway (ProxySG/ASG), SSL Visibility, CASB (CloudSOC), and DLP.
-  Product documentation and REST APIs are published on the Broadcom TechDocs portal.'
+description: Blue Coat Systems was a web-security and network-forensics vendor best known for its ProxySG secure
+  web gateway appliances, SSL Visibility, WebPulse/Global Intelligence Network threat intelligence, and cloud web
+  security (the Web Security Service). Bain Capital led a consortium that took Blue Coat private in 2015; Symantec
+  acquired the company in 2016, and Broadcom acquired Symantec's enterprise security business in 2019. Blue Coat's
+  technology now ships inside Broadcom's Symantec Enterprise Cloud portfolio as Cloud Secure Web Gateway (Cloud
+  SWG), Secure Web Gateway (ProxySG/ASG), SSL Visibility, CASB (CloudSOC), and DLP. Product documentation and REST
+  APIs are published on the Broadcom TechDocs portal.
 url: https://raw.githubusercontent.com/api-evangelist/bluecoat-symantec/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -29,7 +28,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-08-21'
 tags:
 - Company
 - Security
@@ -42,6 +41,12 @@ tags:
 - DLP
 apis: []
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/symantec/
+  name: Symantec
+  x-relationship: acquisition
+  x-generated-by: broadcom-family:2026-08-21
+  x-acquired: 2016
 - type: DomainSecurity
   url: security/bluecoat-symantec-domain-security.yml
 - type: Website
@@ -70,3 +75,6 @@ x-enrichment:
   status: backfilled
   pass: local-v1
   note: backfilled from .gitignore signal + verified work evidence
+x-parent: symantec
+x-relationship: acquisition
+x-acquired: 2016
